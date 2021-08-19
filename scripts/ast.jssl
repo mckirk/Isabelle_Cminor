@@ -1,0 +1,7 @@
+# rename reserved keywords
+(isabelle: typ =n type)
+
+AST:
+	typ
+	globvar
+	globdef

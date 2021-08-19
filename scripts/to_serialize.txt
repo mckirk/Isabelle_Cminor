@@ -1,0 +1,33 @@
+(ocaml: char list =t string)
+(ocaml: Int.int =n Int_int)
+(ocaml: Int64.int =n Int64_int)
+(ocaml: Ptrofs.int =n Ptrofs_int)
+
+(isabelle: typ =n type)
+
+Integers:
+	comparison
+
+AST:
+	(ocaml: fundef =n AST_fundef)
+	(ocaml: program =n AST_program)
+	(ocaml: ident =t ident_str)
+	ident
+	typ
+	rettype
+	calling_convention
+	signature
+	memory_chunk
+	init_data
+	globvar
+	globdef
+	program
+	external_function
+	fundef
+
+Cminor:
+	(ocaml: AST.fundef =n AST_fundef)
+	(ocaml: AST.program =n AST_program)
+	(isabelle: constant =n const)
+	(isabelle: coq_function =n func)
+	*

@@ -1,0 +1,34 @@
+# alias 'char list' to native string type
+(ocaml: char list =p string)
+
+# in Isabelle, idents are strings; in CompCert, they point into a hash map
+# so we rename the type here and convert upon deserialization
+(ocaml: ident =n ident_str)
+
+# rename reserved keywords
+(isabelle: typ =n type)
+(isabelle: constant =n const)
+(isabelle: coq_function =n func) # already renamed during extraction by Coq
+
+Integers:
+	comparison
+
+AST:
+	# explicitly qualify, so the Cminor types can find these
+	(ocaml: fundef =n AST.fundef)
+	(ocaml: program =n AST.program)
+
+	typ
+	rettype
+	calling_convention
+	signature
+	memory_chunk
+	init_data
+	globvar
+	globdef
+	program
+	external_function
+	fundef
+
+Cminor:
+	* # means: process all types defined in 'Cminor'
